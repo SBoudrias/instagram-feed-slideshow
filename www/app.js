@@ -44,7 +44,7 @@ app.configure('development', function(){
 // ---
 // Request Handlers
 
-app.get('/newphoto', routes.auth.get);
+app.get('/newphoto', routes.newphoto.get);
 app.post('/newphoto', routes.newphoto.post);
 
 app.get('/', routes.index);
