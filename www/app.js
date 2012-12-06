@@ -52,9 +52,12 @@ app.configure('development', function(){
 
 app.get('/newphoto', routes.newphoto.get);
 app.post('/newphoto', function( req, res ) {
-	console.log('THIS HAVE BEEN CALLED.');
-	console.log( req );
-	ev.emit( 'newphoto', parseInstragram( req ) );
+	Instagram.tags.recent({
+		name     : 'bonparty',
+		complete : function( r ) {
+			ev.emit( 'newphoto', parseInstragram( r ) );
+		}
+	});
 	res.end();
 });
 
@@ -77,7 +80,7 @@ var ioServer = io.listen( server );
 ioServer.sockets.on('connection', function( socket ) {
 
 	ev.on('test', function( txt ) {
-		ioServer.sockets.emit('status', {status: "so far, so good" + txt});
+		socket.emit('status', {status: "so far, so good" + txt});
 	});
 
 	ev.emit('test', 'bla');
@@ -85,7 +88,7 @@ ioServer.sockets.on('connection', function( socket ) {
 	
 
 	ev.on('newphoto', function( photo ) {
-		ioServer.sockets.emit('newphoto', photo);
+		socket.emit('newphoto', photo);
 	});
 });
 
@@ -107,6 +110,7 @@ Instagram.subscriptions.subscribe({ object: 'tag', object_id: 'bonparty' });
 function parseInstragram( data ) {
 	return _.map( data, function( imgData ) {
 		return {
+			id          : imgData.id,
 			img         : imgData.images.standard_resolution,
 			description : imgData.caption.text,
 			author      : imgData.user.full_name
