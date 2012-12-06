@@ -3,7 +3,7 @@
 	"use strict";
 
 	// Connect server
-	var socket = io.connect('http://http://ressac-slideshow.herokuapp.com/');
+	var socket = io.connect('http://ressac-slideshow.herokuapp.com/');
 
 	socket.on('status', function( data ) {
 		alert( data.status );
