@@ -37,7 +37,6 @@
 
 		// Listen for new images
 		socket.on('newphoto', function( slides ) {
-			console.log( slides );
 			$.each( slides, function( i, slide ) {
 				if( store.add( slide ) ) {
 					var $li = createSlide( slide );
@@ -71,7 +70,7 @@
 			$next.addClass('js-next-active');
 
 			$next.animate({ opacity: 1 }, 1000, function() {
-				$active.removeClass('js-active');
+				$active.removeClass('js-active').css("opacity": 1);
 				$next.removeClass('js-next-active').addClass('js-active');
 			});
 
