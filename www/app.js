@@ -52,12 +52,16 @@ app.configure('development', function(){
 
 app.get('/newphoto', routes.newphoto.get);
 app.post('/newphoto', function( req, res ) {
-	Instagram.tags.recent({
-		name     : 'bonparty',
-		complete : function( r ) {
-			ev.emit( 'newphoto', parseInstragram( r ) );
-		}
-	});
+	setTimeout(function() {
+		Instagram.tags.recent({
+			name     : 'bonparty',
+			complete : function( r ) {
+				ev.emit( 'newphoto', parseInstragram( r ) );
+				ev.emit( 'debug', JSON.stringify(req) );
+			}
+		});
+	}, 3000);
+	
 	res.end();
 });
 
@@ -80,6 +84,9 @@ var ioServer = io.listen( server );
 ioServer.sockets.on('connection', function( socket ) {
 	ev.on('newphoto', function( photos ) {
 		socket.emit( 'newphoto', photos );
+	});
+	ev.on('debug', function( data ) {
+		socket.emit( 'debug', data );
 	});
 });
 

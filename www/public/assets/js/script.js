@@ -39,10 +39,15 @@
 		socket.on('newphoto', function( slides ) {
 			console.log( slides );
 			$.each( slides, function( i, slide ) {
-				store.add( slide );
-				var $li = createSlide( slide );
-				$main.append( $li );
+				if( store.add( slide ) ) {
+					var $li = createSlide( slide );
+					$main.append( $li );
+				}
 			});
+		});
+
+		socket.on('debug', function( data ) {
+			console.log( JSON.parse(data) );
 		});
 		
 	});
