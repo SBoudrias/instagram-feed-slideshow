@@ -1,10 +1,11 @@
 var config   = require('../config'),
 	events   = require('../events'),
 	_        = require('underscore'),
+	Instagram = require('instagram-node-lib'),
 	ev       = require('../utils/events');
 
 exports.get = function( req, res ) {
-	console.log( arguments );
-	res.write( req.query["hub.challenge"] );
-	res.end();
+
+	Instagram.subscriptions.handshake( req, res );
+
 };

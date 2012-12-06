@@ -11,7 +11,6 @@ exports.index = function( req, res ) {
 		name     : 'bonparty',
 		complete : function( r ) {
 			var data = parseInstragram( r );
-			console.log( data );
 			res.render('index', { data: JSON.stringify(data) });
 			res.end();
 		}

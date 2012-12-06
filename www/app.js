@@ -102,7 +102,7 @@ ioServer.configure(function() {
 // ---
 // Subscribe to instagram
 
-Instagram.tags.subscribe({ object_id: 'bonparty' });
+Instagram.subscriptions.subscribe({ object: 'tag', object_id: 'bonparty' });
 
 
 // ---
