@@ -1,0 +1,19 @@
+{
+  "name": "ressac-slideshow",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "app.js"
+  },
+  "dependencies": {
+    "hjs"                : "0.0.4",
+    "express"            : "3.0.4",
+    "async"              : "0.1.22",
+    "underscore"         : "1.4.3",
+    "instagram-node-lib" : "0.1.1",
+    "socket.io"          : "0.9.11"
+  },
+  "engines": {
+    "node": "0.6.x"
+  }
+}

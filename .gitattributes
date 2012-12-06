@@ -1,0 +1,8 @@
+# Protect whitespace line ending
+* text=auto
+
+# Image diffing
+*.png diff=exif
+*.jpg diff=exif
+*.gif diff=exif
+*.jpeg diff=exif

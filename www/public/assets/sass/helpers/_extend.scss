@@ -1,0 +1,39 @@
+// ---
+// Extendible elements
+
+// Contains floating elem
+%clearfix {
+	zoom: 1;
+  
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// Example gradient
+%gradient {
+	background-color: #fff; // fallback color
+	$experimental-support-for-pie: true;
+	$experimental-support-for-svg: true;
+	@include background(linear-gradient(top, #fff, #f4f4f4));
+	behavior: url(/PIE.htc);
+}
+
+// Example sprite
+
+	/** Put these rules at top
+	 * 
+	 * @import "foo/*.png";
+	 * $disable-magic-sprite-selectors: true;
+	 **/
+	
+	/*
+	 * .step-marker-1 {
+	 *  	@include foo-sprite("image_name");
+	 * }
+	 **/

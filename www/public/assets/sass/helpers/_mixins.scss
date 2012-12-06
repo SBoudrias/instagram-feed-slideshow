@@ -1,0 +1,75 @@
+// ---
+// Base Vars
+	
+	// Config options
+	$ie-lt9: false !default;
+	
+	// Fonts
+	$font: arial, sans-serif;
+	
+	// Colors
+	$color: #000;
+
+
+// ---
+// Mixins
+
+// Mixins to contains floating elem
+@mixin clearfix {
+	zoom: 1;
+  
+	&:before,
+	&:after {
+		content: "";
+		display: table;
+	}
+	&:after {
+		clear: both;
+	}
+}
+
+// IE 6-7 `inline block` fallback
+@mixin inline-block {
+	display: inline-block;
+	.lt-ie8 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+// Set an img as the background of an element
+@mixin img-bg( $img, $addBg: true ) {
+	width: image-width( $img );
+	height: image-height( $img );
+	@if $addBg == true {
+		background: url( $img ) no-repeat center center;
+	}
+}
+
+// Set media queries this way to easily remove them if it's an old IE stylesheet
+// Will only work in a `mobile first` perspective. Use normal MQ otherwise.
+@mixin breakpoint( $point ) {
+	
+	@if $ie-lt9 == true {
+		@content;
+	} @else {
+		@media ( $point ) { @content; }
+	}
+	
+}
+
+
+// ---
+// Functions
+
+// em( value px [, context px] )
+@function em($target, $context: $base-font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0em;
+}
+
+// ratio( value px [, context int] )
+@function ratio($target, $context: $base-font-size) {
+	@if $target == 0 { @return 0 }
+	@return $target / $context + 0;
+}
