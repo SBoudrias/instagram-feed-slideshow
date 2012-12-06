@@ -22,10 +22,6 @@
 				return true;
 		}
 	};
-
-	socket.on('status', function( data ) {
-		alert( data.status );
-	});
 	
 	// On dom ready
 	$(function() {

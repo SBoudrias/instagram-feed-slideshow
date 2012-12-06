@@ -78,23 +78,15 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 var ioServer = io.listen( server );
 
 ioServer.sockets.on('connection', function( socket ) {
-
-	ev.on('test', function( txt ) {
-		socket.emit('status', {status: "so far, so good" + txt});
-	});
-
-	ev.emit('test', 'bla');
-
-	
-
-	ev.on('newphoto', function( photo ) {
-		socket.emit('newphoto', photo);
+	ev.on('newphoto', function( photos ) {
+		socket.emit( 'newphoto', photos );
 	});
 });
 
 ioServer.configure(function() {
 	ioServer.set("transports", ["xhr-polling"]);
 	ioServer.set("polling duration", 10);
+	ioServer.set('log level', 1);
 });
 
 
