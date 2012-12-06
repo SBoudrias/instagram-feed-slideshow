@@ -3,3 +3,65 @@
 @import "helpers/reset";
 @import "helpers/extend";
 
+body {
+	font-family: "Source Sans Pro", sans-serif;
+}
+
+.header {
+	position: absolute;
+	top: 120px;
+	left: 120px;
+	right: 120px;
+	bottom: 120px;
+	text-align: center;
+	z-index: 10;
+	img {
+		width: 100%;
+		height: auto;
+	}
+}
+.main {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+	padding: 0;
+	li {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+		background: center center no-repeat;
+		background-size: cover;
+		@include opacity(0);
+	}
+	.js-next-active {
+		z-index: 3;
+		@include opacity(0);
+	}
+	.js-active {
+		z-index: 2;
+	}
+	// .label {
+	// 	position: absolute;
+	// 	bottom: 0;
+	// 	left: 0;
+	// 	right: 0;
+	// 	background: rgba(0,0,0,0.5);
+	// 	padding: 20px 50px;
+	// 	margin: 0;
+	// 	text-align: center;
+	// 	color: #fff;
+	// 	font-size: em(24px);
+	// }
+	// .author {
+	// 	display: block;
+	// 	font-weight: bold;
+	// }
+}

@@ -41,31 +41,55 @@
 			$.each( slides, function( i, slide ) {
 				if( store.add( slide ) ) {
 					var $li = createSlide( slide );
-					$main.append( $li );
+					var $active = $main.find('.js-active');
+
+					if( $active.length ) {
+						$active.after( $li );
+					} else {
+						$main.append( $li );
+					}
 				}
 			});
 		});
 
-		socket.on('debug', function( data ) {
-			console.log( JSON.parse(data) );
-		});
+		launchSlider();
+
+		function launchSlider() {
+			var $active = $main.find('.js-active'),
+				$next;
+
+			if ( !$active.length ) {
+				$active = $main.find('.slide').last().addClass('js-active');
+			}
+
+			$next = $active.next('.slide');
+
+			if ( !$next.length ) {
+				$next = $main.find('.slide').first();
+			}
+
+			$next.addClass('js-next-active');
+
+			$next.animate({ opacity: 1 }, 1000, function() {
+				$active.removeClass('js-active');
+				$next.removeClass('js-next-active').addClass('js-active');
+			});
+
+			setTimeout( launchSlider, 5000 );
+
+		}
 		
 	});
 
 	function createSlide( slide ) {
 
-		var $img = $('<img/>')
-			.attr({
-				src: slide.img.url,
-				width: slide.img.width,
-				height: slide.img.height
-			});
-
 		var $li = $('<li/>')
 			.addClass('slide')
-			.append( $img );
+			.css("background-image", "url("+ slide.img.url +")");
 
 		return $li;
 	}
+
+
 	
 }( window, jQuery, io ));

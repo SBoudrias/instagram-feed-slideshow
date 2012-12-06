@@ -21,7 +21,7 @@ module.exports = function( grunt ) {
 		clean: {
 			all: [
 				"dist/",
-				"www/app/app_build.js"
+				"www/public/app/app_build.js"
 			],
 			build: [
 				"dist/"
@@ -34,7 +34,7 @@ module.exports = function( grunt ) {
 		// https://github.com/cowboy/grunt/blob/master/docs/task_lint.md
 		lint: {
 			files: [
-				"www/app/**/*.js"
+				"www/public/app/**/*.js"
 			]
 		},
 		
@@ -50,7 +50,7 @@ module.exports = function( grunt ) {
 		// Smushit task will compress images through yahoo smushit services
 		img: {
 			compile: {
-				src: "www/assets/img"
+				src: "www/public/assets/img"
 			}
 		},
 		
@@ -59,20 +59,20 @@ module.exports = function( grunt ) {
 		// or Chrome devtools. `prod` compress and minify the code
 		compass: {
 			dev: {
-				src: 'www/assets/sass',
-				dest: 'www/assets/css',
+				src: 'www/public/assets/sass',
+				dest: 'www/public/assets/css',
 				forcecompile: true,
 				debugsass: true,
-				images: 'www/assets/img',
+				images: 'www/public/assets/img',
 				relativeassets: true
 			},
 			prod: {
-				src: 'www/assets/sass',
-				dest: 'www/assets/css',
+				src: 'www/public/assets/sass',
+				dest: 'www/public/assets/css',
 				outputstyle: 'compressed',
 				forcecompile: true,
 				debugsass: false,
-				images: 'www/assets/img',
+				images: 'www/public/assets/img',
 				relativeassets: true
 			}
 		},
@@ -85,11 +85,11 @@ module.exports = function( grunt ) {
 				options: {
 					processName: function( filename ) {
 						// normalize filename
-						return filename.replace( 'www/', '' );
+						return filename.replace( 'www/public/', '' );
 					}
 				},
 				files: {
-					"dist/debug/templates.js": [ "www/app/templates/**/*.html" ]
+					"dist/debug/templates.js": [ "www/public/app/templates/**/*.html" ]
 				}
 			}
 		},
@@ -100,11 +100,11 @@ module.exports = function( grunt ) {
 				options: {
 					processName: function( filename ) {
 						// normalize filename
-						return filename.replace( 'www/', '' );
+						return filename.replace( 'www/public/', '' );
 					}
 				},
 				files: {
-					"dist/debug/templates.js": [ "www/app/templates/**/*.html" ]
+					"dist/debug/templates.js": [ "www/public/app/templates/**/*.html" ]
 				}
 			}
 		},
@@ -113,12 +113,12 @@ module.exports = function( grunt ) {
 		concat: {
 			dist: {
 				src: [
-					"www/assets/js/libs/require.js",
+					"www/public/assets/js/libs/require.js",
 					"dist/debug/templates.js",
 					"dist/debug/app.js"
 				],
 				
-				dest: "www/app/app_build.js",
+				dest: "www/public/app/app_build.js",
 				
 				separator: ";"
 			}
@@ -126,17 +126,17 @@ module.exports = function( grunt ) {
 		
 		// Minify javascript files (through Uglify.js)
 		min: {
-			"www/app/app_build.js": [ "www/app/app_build.js" ]
+			"www/public/app/app_build.js": [ "www/public/app/app_build.js" ]
 		},
 		
 		// `requirejs` task use `r.js` builde and optimizer tool for AMD modules
 		requirejs: {
 			compile: {
 				options: {
-					baseUrl: "www/app/",
+					baseUrl: "www/public/app/",
 					
 					// Include the main configuration file.
-					mainConfigFile: "www/app/config.js",
+					mainConfigFile: "www/public/app/config.js",
 					
 					// Output file.
 					out: "dist/debug/app.js",
@@ -223,11 +223,11 @@ module.exports = function( grunt ) {
 		// Watch task checks for files changes, then execute the defined task
 		watch: {
 			compass: {
-				files: ['www/assets/sass/**/*'],
+				files: ['www/public/assets/sass/**/*'],
 				tasks: ['compass:dev']
 			},
 			scripts: {
-				files: ['www/app/**/*'],
+				files: ['www/public/app/**/*'],
 				tasks: ['scripts']
 			}
 		}

@@ -13,6 +13,11 @@
     "instagram-node-lib" : "0.1.1",
     "socket.io"          : "0.9.11"
   },
+  "devDependencies" : {
+    "grunt-contrib" : "0.3.0",
+    "grunt-compass" : "0.3.2",
+    "grunt-img"     : "0.1.4"
+  },
   "engines": {
     "node": "0.6.x"
   }

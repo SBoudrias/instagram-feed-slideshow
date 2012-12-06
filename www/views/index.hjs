@@ -3,15 +3,18 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Mile-End Instragram</title>
+	<title>Ressac au Mile-End</title>
 	
 	<meta name="viewport" content="width=device-width">
 	
+	<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="assets/css/main.css" />
 	
 </head>
 <body>
-	<h1>Hello world</h1>
+	<div class="header">
+		<img src="/assets/img/header.svg" alt="Bon party" width="800" height="600">
+	</div>
 	<ul id="main" class="main"></ul>
 	
 	<script>
