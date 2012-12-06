@@ -8,7 +8,12 @@ var express  = require('express'),
 	http     = require('http'),
 	path     = require('path'),
 	Instagram = require('instagram-node-lib'),
-	io        = require('socket.io');
+	io        = require('socket.io'),
+	_         = require('underscore'),
+
+	EventEmitter = require('events').EventEmitter;
+
+var ev = new EventEmitter();
 
 
 // ---
@@ -16,6 +21,7 @@ var express  = require('express'),
 
 Instagram.set( 'client_id', config.instagram.id );
 Instagram.set( 'client_secret', config.instagram.secret );
+Instagram.set( 'callback_url', 'http://ressac-slideshow.herokuapp.com/newphoto' );
 
 
 // ---
@@ -45,7 +51,11 @@ app.configure('development', function(){
 // Request Handlers
 
 app.get('/newphoto', routes.newphoto.get);
-app.post('/newphoto', routes.newphoto.post);
+app.post('/newphoto', function( req, res ) {
+	ev.emit( 'newphoto', parseInstragram( req ) );
+
+	res.end();
+});
 
 app.get('/', routes.index);
 
@@ -62,17 +72,21 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 // Sockets
 
 io.listen( server ).sockets.on('connection', function( socket ) {
-	setTimeout(function() {
-		socket.emit('newphoto', {
-			"img":{
-				"url":"http://distilleryimage7.s3.amazonaws.com/b97986ac3fb711e2890a22000a1fbc9a_7.jpg",
-				"width":612,
-				"height":612
-			},
-			"description":"La pompe #bonparty",
-			"author":"Ressac"
-		});
-	}, 3000);
+	// setTimeout(function() {
+	// 	socket.emit('newphoto', {
+	// 		"img":{
+	// 			"url":"http://distilleryimage7.s3.amazonaws.com/b97986ac3fb711e2890a22000a1fbc9a_7.jpg",
+	// 			"width":612,
+	// 			"height":612
+	// 		},
+	// 		"description":"La pompe #bonparty",
+	// 		"author":"Ressac"
+	// 	});
+	// }, 3000);
+
+	ev.on('newphoto', function( photo ) {
+		socket.emit('newphoto', photo);
+	});
 });
 
 
@@ -80,3 +94,17 @@ io.listen( server ).sockets.on('connection', function( socket ) {
 // Subscribe to instagram
 
 Instagram.tags.subscribe({ object_id: 'bonparty' });
+
+
+// ---
+// Helper functions
+
+function parseInstragram( data ) {
+	return _.map( data, function( imgData ) {
+		return {
+			img         : imgData.images.standard_resolution,
+			description : imgData.caption.text,
+			author      : imgData.user.full_name
+		};
+	});
+}
