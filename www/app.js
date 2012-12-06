@@ -86,10 +86,10 @@ ioServer.sockets.on('connection', function( socket ) {
 	// 	});
 	// }, 3000);
 
-socket.emit('status', {status: "so far, so good"});
+	ioServer.sockets.emit('status', {status: "so far, so good"});
 
 	ev.on('newphoto', function( photo ) {
-		socket.emit('newphoto', photo);
+		ioServer.sockets.emit('newphoto', photo);
 	});
 });
 
