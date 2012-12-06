@@ -52,8 +52,9 @@ app.configure('development', function(){
 
 app.get('/newphoto', routes.newphoto.get);
 app.post('/newphoto', function( req, res ) {
+	console.log('THIS HAVE BEEN CALLED.');
+	console.log( req );
 	ev.emit( 'newphoto', parseInstragram( req ) );
-
 	res.end();
 });
 
@@ -74,19 +75,14 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 var ioServer = io.listen( server );
 
 ioServer.sockets.on('connection', function( socket ) {
-	// setTimeout(function() {
-	// 	socket.emit('newphoto', {
-	// 		"img":{
-	// 			"url":"http://distilleryimage7.s3.amazonaws.com/b97986ac3fb711e2890a22000a1fbc9a_7.jpg",
-	// 			"width":612,
-	// 			"height":612
-	// 		},
-	// 		"description":"La pompe #bonparty",
-	// 		"author":"Ressac"
-	// 	});
-	// }, 3000);
 
-	ioServer.sockets.emit('status', {status: "so far, so good"});
+	ev.on('test', function( txt ) {
+		ioServer.sockets.emit('status', {status: "so far, so good" + txt});
+	});
+
+	ev.emit('test', 'bla');
+
+	
 
 	ev.on('newphoto', function( photo ) {
 		ioServer.sockets.emit('newphoto', photo);

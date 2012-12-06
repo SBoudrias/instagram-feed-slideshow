@@ -3,6 +3,9 @@
 	"use strict";
 
 	// Connect server
+	/*
+	var socket = io.connect('http://127.0.0.1:3000/');
+	 */
 	var socket = io.connect('http://ressac-slideshow.herokuapp.com/');
 
 	socket.on('status', function( data ) {
