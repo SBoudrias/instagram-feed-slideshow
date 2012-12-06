@@ -17,6 +17,15 @@ var ev = new EventEmitter();
 
 
 // ---
+// Setup Socket.io
+
+io.configure(function () { 
+  io.set("transports", ["xhr-polling"]); 
+  io.set("polling duration", 10); 
+});
+
+
+// ---
 // Setup Instagram
 
 Instagram.set( 'client_id', config.instagram.id );
