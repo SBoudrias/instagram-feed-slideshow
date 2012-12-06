@@ -17,15 +17,6 @@ var ev = new EventEmitter();
 
 
 // ---
-// Setup Socket.io
-
-io.configure(function () { 
-  io.set("transports", ["xhr-polling"]); 
-  io.set("polling duration", 10); 
-});
-
-
-// ---
 // Setup Instagram
 
 Instagram.set( 'client_id', config.instagram.id );
@@ -80,7 +71,9 @@ var server = http.createServer(app).listen(app.get('port'), function(){
 // ---
 // Sockets
 
-io.listen( server ).sockets.on('connection', function( socket ) {
+var ioServer = io.listen( server );
+
+ioServer.sockets.on('connection', function( socket ) {
 	// setTimeout(function() {
 	// 	socket.emit('newphoto', {
 	// 		"img":{
@@ -97,6 +90,9 @@ io.listen( server ).sockets.on('connection', function( socket ) {
 		socket.emit('newphoto', photo);
 	});
 });
+
+ioServer.set("transports", ["xhr-polling"]);
+ioServer.set("polling duration", 10);
 
 
 // ---
