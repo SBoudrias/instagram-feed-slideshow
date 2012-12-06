@@ -86,13 +86,17 @@ ioServer.sockets.on('connection', function( socket ) {
 	// 	});
 	// }, 3000);
 
+socket.emit('status', {status: "so far, so good"});
+
 	ev.on('newphoto', function( photo ) {
 		socket.emit('newphoto', photo);
 	});
 });
 
-ioServer.set("transports", ["xhr-polling"]);
-ioServer.set("polling duration", 10);
+ioServer.configure(function() {
+	ioServer.set("transports", ["xhr-polling"]);
+	ioServer.set("polling duration", 10);
+});
 
 
 // ---
