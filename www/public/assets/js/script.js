@@ -70,7 +70,7 @@
 			$next.addClass('js-next-active');
 
 			$next.animate({ opacity: 1 }, 1000, function() {
-				$active.removeClass('js-active').css("opacity": 1);
+				$active.removeClass('js-active').css("opacity", 1);
 				$next.removeClass('js-next-active').addClass('js-active');
 			});
 
