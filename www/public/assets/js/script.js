@@ -6,7 +6,7 @@
 	/*
 	var socket = io.connect('http://127.0.0.1:3000/');
 	 */
-	var socket = io.connect('http://ressac-slideshow.herokuapp.com/');
+	var socket = io.connect(location.href);
 	var store  = {
 		data : [],
 		add: function( model ) {
