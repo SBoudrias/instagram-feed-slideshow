@@ -89,9 +89,9 @@ ioServer.sockets.on('connection', function( socket ) {
 // ---
 // Subscribe to instagram
 
-Instagram.media.unsubscribe_all();
+Instagram.media.unsubscribe_all({});
 process.on('SIGINT', function() {
-	Instagram.media.unsubscribe_all();
+	Instagram.media.unsubscribe_all({});
 });
 Instagram.subscriptions.subscribe({ object: 'tag', object_id: config.hashtag });
 
