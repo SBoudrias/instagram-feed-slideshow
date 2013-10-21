@@ -3,9 +3,6 @@
 	"use strict";
 
 	// Connect server
-	/*
-	var socket = io.connect('http://127.0.0.1:3000/');
-	 */
 	var socket = io.connect(location.href);
 	var store  = {
 		data : [],
@@ -69,10 +66,10 @@
 
 			$next.addClass('js-next-active');
 
-			$next.animate({ opacity: 1 }, 1000, function() {
-				$active.removeClass('js-active').css("opacity", 1);
+			setTimeout(function() {
+				$active.removeClass('js-active');
 				$next.removeClass('js-next-active').addClass('js-active');
-			});
+			}, 0);
 
 			setTimeout( launchSlider, 5000 );
 
