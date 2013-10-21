@@ -4,53 +4,51 @@
 
 	// Connect server
 	var socket = io.connect(location.href);
-	var store  = {
-		data : [],
-		add: function( model ) {
-			if( !model.id ) {
-				this.data.push( model );
-				return true;
-			}
 
-			var s = _.where( this.data, { id: model.id } );
-			if( s.length ) { return false; }
-
-			this.data.push( model );
-				return true;
-		}
-	};
-	
-	// On dom ready
 	$(function() {
 		
 		var $main = $('#main');
 
-		// Render available information
-		$.each( window.slideshow, function( i, slide ) {
-			store.add( slide );
-			var $li = createSlide( slide );
-			$main.append( $li );
-		});
+		// Render available information on start
+		$main.append( _.map(window.slideshow, createSlide) );
 
 		// Listen for new images
 		socket.on('newphoto', function( slides ) {
-			$.each( slides, function( i, slide ) {
-				if( store.add( slide ) ) {
-					var $li = createSlide( slide );
-					var $active = $main.find('.js-active');
+			_.each( slides, function( slide ) {
+				var $slides = $main.find('.slide');
 
-					if( $active.length ) {
-						$active.after( $li );
-					} else {
-						$main.append( $li );
+				// Prevent duplicate
+				if ( slides.find('[data-id='+ slide.id +']').length ) return;
+
+				var $li = createSlide( slide );
+				var $lastInQueue = $slides.not('.shown');
+				var $active = $slides.filter('.js-active');
+
+				// Add to the optimal place in queue
+				if( $lastInQueue.length ) {
+					$lastInQueue.after( $li );
+				} else if( $active.length ) {
+					$active.after( $li );
+				} else {
+					$main.append( $li );
+				}
+
+				// Remove extra DOM elements
+				if ( $slides.length > 50 ) {
+					var rest = $slides.length - 50;
+					var shown = $slides.filter('.shown').not(".js-active");
+
+					shown.slide(0, rest).remove();
+
+					if (shown.length < rest) {
+						rest = rest - shown.length;
+						$slides.slice(0, rest).remove();
 					}
 				}
 			});
 		});
 
-		launchSlider();
-
-		function launchSlider() {
+		(function launchSlider() {
 			var $active = $main.find('.js-active'),
 				$next;
 
@@ -68,22 +66,21 @@
 
 			setTimeout(function() {
 				$active.removeClass('js-active');
-				$next.removeClass('js-next-active').addClass('js-active');
+				$next.removeClass('js-next-active').addClass('js-active').addClass('shown');
 			}, 0);
 
 			setTimeout( launchSlider, 5000 );
 
-		}
+		}());
 		
 	});
 
+	// Create a DOM slide element
 	function createSlide( slide ) {
-
-		var $li = $('<li/>')
+		return $('<li/>')
 			.addClass('slide')
-			.css("background-image", "url("+ slide.img.url +")");
-
-		return $li;
+			.data( 'id', slide.id )
+			.css( "background-image", "url("+ slide.img.url +")" );
 	}
 
 
