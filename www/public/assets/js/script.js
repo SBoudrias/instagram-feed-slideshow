@@ -3,7 +3,7 @@
 	"use strict";
 
 	// Connect server
-	var socket = io.connect("http://cossette-halloween.herokuapp.com/");
+	var socket = io.connect(location.href);
 
 	$(function() {
 		
@@ -18,7 +18,7 @@
 				var $slides = $main.find('.slide');
 
 				// Prevent duplicate
-				if ( $slides.find('[data-id='+ slide.id +']').length ) return;
+				if ( $slides.filter('[data-id='+ slide.id +']').length ) return;
 
 				var $li = createSlide( slide );
 				var $lastInQueue = $slides.not('.shown');
