@@ -79,7 +79,7 @@
 	function createSlide( slide ) {
 		return $('<li/>')
 			.addClass('slide')
-			.data( 'id', slide.id )
+			.attr( 'data-id', slide.id )
 			.css( "background-image", "url("+ slide.img.url +")" );
 	}
 

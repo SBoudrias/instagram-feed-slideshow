@@ -1,5 +1,4 @@
 var config     = require('../config'),
-	events     = require('../events'),
 	Instagram  = require('instagram-node-lib'),
 	_          = require('underscore'),
 	config     = require('../config');
