@@ -1,8 +1,8 @@
 var config = {
 	instagram: {
-		id     : "62ba227014e9464b84ac94548b42ff55",
-		secret : "4df37d3f6b0a4e6882cd2d17131838a4",
-		callbackUrl: "http://ressac-slideshow.herokuapp.com/newphoto"
+		id     : "4a42a65059c24e4f8f7f57770345b9ad",
+		secret : "e10c09a2ee73453fb719be5875a4ef42",
+		callbackUrl: "http://cossette-halloween.herokuapp.com/newphoto"
 	},
 	hashtag: 'bonparty'
 };
