@@ -15,38 +15,38 @@
 		// Listen for new images
 		socket.on('newphoto', function( slides ) {
 			console.log("photo");
-		// 	_.each( slides, function( slide ) {
-		// 		var $slides = $main.find('.slide');
+			_.each( slides, function( slide ) {
+				var $slides = $main.find('.slide');
 
-		// 		// Prevent duplicate
-		// 		if ( $slides.find('[data-id='+ slide.id +']').length ) return;
+				// Prevent duplicate
+				if ( $slides.find('[data-id='+ slide.id +']').length ) return;
 
-		// 		var $li = createSlide( slide );
-		// 		var $lastInQueue = $slides.not('.shown');
-		// 		var $active = $slides.filter('.js-active');
+				var $li = createSlide( slide );
+				var $lastInQueue = $slides.not('.shown');
+				var $active = $slides.filter('.js-active');
 
-		// 		// Add to the optimal place in queue
-		// 		if( $lastInQueue.length ) {
-		// 			$lastInQueue.after( $li );
-		// 		} else if( $active.length ) {
-		// 			$active.after( $li );
-		// 		} else {
-		// 			$main.append( $li );
-		// 		}
+				// Add to the optimal place in queue
+				if( $lastInQueue.length ) {
+					$lastInQueue.after( $li );
+				} else if( $active.length ) {
+					$active.after( $li );
+				} else {
+					$main.append( $li );
+				}
 
-		// 		// Remove extra DOM elements
-		// 		if ( $slides.length > 50 ) {
-		// 			var rest = $slides.length - 50;
-		// 			var shown = $slides.filter('.shown').not(".js-active");
+				// Remove extra DOM elements
+				if ( $slides.length > 50 ) {
+					var rest = $slides.length - 50;
+					var shown = $slides.filter('.shown').not(".js-active");
 
-		// 			shown.slice(0, rest).remove();
+					shown.slice(0, rest).remove();
 
-		// 			if (shown.length < rest) {
-		// 				rest = rest - shown.length;
-		// 				$slides.slice(0, rest).remove();
-		// 			}
-		// 		}
-		// 	});
+					if (shown.length < rest) {
+						rest = rest - shown.length;
+						$slides.slice(0, rest).remove();
+					}
+				}
+			});
 		});
 
 		(function launchSlider() {
