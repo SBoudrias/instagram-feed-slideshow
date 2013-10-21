@@ -557,17 +557,27 @@ body {
   top: 0;
   left: 100px;
   right: 100px;
-  bottom: 240px;
+  bottom: 0px;
   text-align: center;
   z-index: 10;
 }
 /* line 18, ../sass/main.scss */
+.header:before {
+  content: "";
+  height: 100%;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: -4px;
+}
+/* line 25, ../sass/main.scss */
 .header img {
   width: 100%;
   height: auto;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-/* line 23, ../sass/main.scss */
+/* line 32, ../sass/main.scss */
 .main {
   position: absolute;
   top: 0;
@@ -577,7 +587,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 31, ../sass/main.scss */
+/* line 40, ../sass/main.scss */
 .main li {
   position: absolute;
   top: 0;
@@ -595,11 +605,11 @@ body {
   -o-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
-/* line 45, ../sass/main.scss */
+/* line 54, ../sass/main.scss */
 .main .js-next-active {
   z-index: 3;
 }
-/* line 48, ../sass/main.scss */
+/* line 57, ../sass/main.scss */
 .main .js-active {
   z-index: 2;
   opacity: 1;

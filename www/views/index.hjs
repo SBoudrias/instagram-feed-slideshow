@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Ressac au Mile-End</title>
+	<title>Party d'Halloween Cossette</title>
 	
 	<meta name="viewport" content="width=device-width">
 	
@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="header">
-		<img src="/assets/img/header.svg" alt="Bon party" width="800" height="600">
+		<img src="/assets/img/feed.svg" alt="Bon party" width="1000" height="637">
 	</div>
 	<ul id="main" class="main"></ul>
 	
@@ -27,8 +27,6 @@
 	<script src="assets/js/libs/socket.io.js"></script>
 	<script src="assets/js/libs/underscore.js"></script>
 	<script src="assets/js/script.js"></script>
-
-	<!--<script src="app/app_build.js"></script>-->
 	
 </body>
 </html>

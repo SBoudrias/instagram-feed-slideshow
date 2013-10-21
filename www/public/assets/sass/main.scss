@@ -12,12 +12,21 @@ body {
 	top: 0;
 	left: 100px;
 	right: 100px;
-	bottom: 240px;
+	bottom: 0px;
 	text-align: center;
 	z-index: 10;
+	&:before {
+		content: "";
+		height: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		margin-left: -4px;
+	}
 	img {
 		width: 100%;
 		height: auto;
+		display: inline-block;
+		vertical-align: middle;
 	}
 }
 .main {

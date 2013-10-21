@@ -101,7 +101,6 @@ function parseInstragram( data ) {
 		return {
 			id          : imgData.id,
 			img         : imgData.images.standard_resolution,
-			description : imgData.caption.text,
 			author      : imgData.user.full_name
 		};
 	});

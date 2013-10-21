@@ -38,7 +38,7 @@
 					var rest = $slides.length - 50;
 					var shown = $slides.filter('.shown').not(".js-active");
 
-					shown.slide(0, rest).remove();
+					shown.slice(0, rest).remove();
 
 					if (shown.length < rest) {
 						rest = rest - shown.length;
