@@ -14,7 +14,6 @@
 
 		// Listen for new images
 		socket.on('newphoto', function( slides ) {
-			console.log("photo");
 			_.each( slides, function( slide ) {
 				var $slides = $main.find('.slide');
 
