@@ -86,7 +86,6 @@ ioServer.sockets.on('connection', function( socket ) {
 });
 
 ioServer.configure(function() {
-	ioServer.set("origins", "http://127.0.0.1:3000");
 	ioServer.set("transports", ["xhr-polling"]);
 	ioServer.set("polling duration", 10);
 	ioServer.set('log level', 1);
