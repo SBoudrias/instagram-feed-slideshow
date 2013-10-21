@@ -65,23 +65,6 @@ app.post('/newphoto', function( req, res ) {
 
 app.get('/', routes.index);
 
-// mock new items
-setInterval(function() {
-	ev.emit( 'newphoto', [{
-		id: Math.random().toString(),
-		img: 'http://lorempixel.com/g/400/400?' + Math.random(),
-		author: 'foo'
-	}, {
-		id: Math.random().toString(),
-		img: 'http://lorempixel.com/g/400/400?' + Math.random(),
-		author: 'foo'
-	}, {
-		id: Math.random().toString(),
-		img: 'http://lorempixel.com/g/400/400?' + Math.random(),
-		author: 'foo'
-	}]);
-}, 3000);
-
 
 // ---
 // Launch server

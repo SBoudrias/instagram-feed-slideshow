@@ -18,7 +18,7 @@
 				var $slides = $main.find('.slide');
 
 				// Prevent duplicate
-				if ( $slides.filter('[data-id='+ slide.id +']').length ) return;
+				if ( $slides.filter('[data-id="'+ slide.id +'"]').length ) return;
 
 				var $li = createSlide( slide );
 				var $lastInQueue = $slides.not('.shown');
