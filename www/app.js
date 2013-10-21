@@ -21,7 +21,7 @@ var ev = new EventEmitter();
 
 Instagram.set( 'client_id', config.instagram.id );
 Instagram.set( 'client_secret', config.instagram.secret );
-Instagram.set( 'callback_url', 'http://ressac-slideshow.herokuapp.com/newphoto' );
+Instagram.set( 'callback_url', config.instagram.callbackUrl );
 
 
 // ---
@@ -54,7 +54,7 @@ app.get('/newphoto', routes.newphoto.get);
 app.post('/newphoto', function( req, res ) {
 	setTimeout(function() {
 		Instagram.tags.recent({
-			name     : 'bonparty',
+			name     : config.hashtag,
 			complete : function( r ) {
 				ev.emit( 'newphoto', parseInstragram( r ) );
 			}
@@ -96,7 +96,7 @@ ioServer.configure(function() {
 // ---
 // Subscribe to instagram
 
-Instagram.subscriptions.subscribe({ object: 'tag', object_id: 'bonparty' });
+Instagram.subscriptions.subscribe({ object: 'tag', object_id: config.hashtag });
 
 
 // ---

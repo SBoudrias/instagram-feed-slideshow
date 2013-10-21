@@ -3,22 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "app.js"
+    "start": "node www/app.js"
   },
   "dependencies": {
-    "hjs"                : "0.0.4",
-    "express"            : "3.0.4",
-    "async"              : "0.1.22",
-    "underscore"         : "1.4.3",
-    "instagram-node-lib" : "0.1.1",
-    "socket.io"          : "0.9.11"
+    "hjs": "~0.0.6",
+    "express": "~3.4.2",
+    "async": "~0.2.9",
+    "underscore": "~1.4.3",
+    "instagram-node-lib": "~0.1.1",
+    "socket.io": "~0.9.16"
   },
-  "devDependencies" : {
-    "grunt-contrib" : "0.3.0",
-    "grunt-compass" : "0.3.2",
-    "grunt-img"     : "0.1.4"
+  "devDependencies": {
+    "grunt-contrib-compass": "~0.6.0",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt": "~0.4.1"
   },
   "engines": {
-    "node": "0.6.x"
+    "node": "0.10.x"
   }
 }

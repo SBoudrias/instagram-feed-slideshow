@@ -1,11 +1,11 @@
-/* normalize.css v1.0.1 | MIT License | git.io/normalize */
+/*! normalize.css v1.0.1 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
    ========================================================================== */
 /*
  * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000321}}
+/* line 21, ../sass/helpers/_reset.scss */
 article,
 aside,
 details,
@@ -23,7 +23,7 @@ summary {
 /*
  * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000331}}
+/* line 31, ../sass/helpers/_reset.scss */
 audio,
 canvas,
 video {
@@ -36,7 +36,7 @@ video {
  * Prevents modern browsers from displaying `audio` without controls.
  * Remove excess height in iOS 5 devices.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000342}}
+/* line 42, ../sass/helpers/_reset.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -47,7 +47,7 @@ audio:not([controls]) {
  * and Safari 4.
  * Known issue: no IE 6 support.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000353}}
+/* line 53, ../sass/helpers/_reset.scss */
 [hidden] {
   display: none;
 }
@@ -61,7 +61,7 @@ audio:not([controls]) {
  * 2. Prevents iOS text size adjust after orientation change, without disabling
  *    user zoom.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000368}}
+/* line 68, ../sass/helpers/_reset.scss */
 html {
   font-size: 100%;
   /* 1 */
@@ -75,7 +75,7 @@ html {
  * Addresses `font-family` inconsistency between `textarea` and other form
  * elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000383}}
+/* line 83, ../sass/helpers/_reset.scss */
 html,
 button,
 input,
@@ -87,7 +87,7 @@ textarea {
 /*
  * Addresses margins handled incorrectly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\0000391}}
+/* line 91, ../sass/helpers/_reset.scss */
 body {
   margin: 0;
 }
@@ -98,7 +98,7 @@ body {
 /*
  * Addresses `outline` inconsistency between Chrome and other browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003103}}
+/* line 103, ../sass/helpers/_reset.scss */
 a:focus {
   outline: thin dotted;
 }
@@ -106,7 +106,7 @@ a:focus {
 /*
  * Improves readability when focused and also mouse hovered in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003112}}
+/* line 112, ../sass/helpers/_reset.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -120,37 +120,37 @@ a:hover {
  * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003126}}
+/* line 126, ../sass/helpers/_reset.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003131}}
+/* line 131, ../sass/helpers/_reset.scss */
 h2 {
   font-size: 1.5em;
   margin: 0.83em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003136}}
+/* line 136, ../sass/helpers/_reset.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003141}}
+/* line 141, ../sass/helpers/_reset.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003146}}
+/* line 146, ../sass/helpers/_reset.scss */
 h5 {
   font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003151}}
+/* line 151, ../sass/helpers/_reset.scss */
 h6 {
   font-size: 0.75em;
   margin: 2.33em 0;
@@ -159,7 +159,7 @@ h6 {
 /*
  * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003160}}
+/* line 160, ../sass/helpers/_reset.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
@@ -167,13 +167,13 @@ abbr[title] {
 /*
  * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003169}}
+/* line 169, ../sass/helpers/_reset.scss */
 b,
 strong {
   font-weight: bold;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003173}}
+/* line 173, ../sass/helpers/_reset.scss */
 blockquote {
   margin: 1em 40px;
 }
@@ -181,7 +181,7 @@ blockquote {
 /*
  * Addresses styling not present in Safari 5 and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003181}}
+/* line 181, ../sass/helpers/_reset.scss */
 dfn {
   font-style: italic;
 }
@@ -189,7 +189,7 @@ dfn {
 /*
  * Addresses styling not present in IE 6/7/8/9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003189}}
+/* line 189, ../sass/helpers/_reset.scss */
 mark {
   background: #ff0;
   color: #000;
@@ -198,7 +198,7 @@ mark {
 /*
  * Addresses margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003199}}
+/* line 199, ../sass/helpers/_reset.scss */
 p,
 pre {
   margin: 1em 0;
@@ -207,7 +207,7 @@ pre {
 /*
  * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003210}}
+/* line 210, ../sass/helpers/_reset.scss */
 code,
 kbd,
 pre,
@@ -220,7 +220,7 @@ samp {
 /*
  * Improves readability of pre-formatted text in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003220}}
+/* line 220, ../sass/helpers/_reset.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
@@ -230,7 +230,7 @@ pre {
 /*
  * Addresses CSS quotes not supported in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003230}}
+/* line 230, ../sass/helpers/_reset.scss */
 q {
   quotes: none;
 }
@@ -238,7 +238,7 @@ q {
 /*
  * Addresses `quotes` property not supported in Safari 4.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003239}}
+/* line 239, ../sass/helpers/_reset.scss */
 q:before,
 q:after {
   content: '';
@@ -248,7 +248,7 @@ q:after {
 /*
  * Addresses inconsistent and variable font size in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003248}}
+/* line 248, ../sass/helpers/_reset.scss */
 small {
   font-size: 80%;
 }
@@ -256,7 +256,7 @@ small {
 /*
  * Prevents `sub` and `sup` affecting `line-height` in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003257}}
+/* line 257, ../sass/helpers/_reset.scss */
 sub,
 sup {
   font-size: 75%;
@@ -265,12 +265,12 @@ sup {
   vertical-align: baseline;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003264}}
+/* line 264, ../sass/helpers/_reset.scss */
 sup {
   top: -0.5em;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003268}}
+/* line 268, ../sass/helpers/_reset.scss */
 sub {
   bottom: -0.25em;
 }
@@ -281,7 +281,7 @@ sub {
 /*
  * Addresses margins set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003283}}
+/* line 283, ../sass/helpers/_reset.scss */
 dl,
 menu,
 ol,
@@ -289,7 +289,7 @@ ul {
   margin: 1em 0;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003287}}
+/* line 287, ../sass/helpers/_reset.scss */
 dd {
   margin: 0 0 0 40px;
 }
@@ -297,7 +297,7 @@ dd {
 /*
  * Addresses paddings set differently in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003297}}
+/* line 297, ../sass/helpers/_reset.scss */
 menu,
 ol,
 ul {
@@ -307,7 +307,7 @@ ul {
 /*
  * Corrects list images handled incorrectly in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003306}}
+/* line 306, ../sass/helpers/_reset.scss */
 nav ul,
 nav ol {
   list-style: none;
@@ -321,7 +321,7 @@ nav ol {
  * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
  * 2. Improves image quality when scaled in IE 7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003320}}
+/* line 320, ../sass/helpers/_reset.scss */
 img {
   border: 0;
   /* 1 */
@@ -332,7 +332,7 @@ img {
 /*
  * Corrects overflow displayed oddly in IE 9.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003329}}
+/* line 329, ../sass/helpers/_reset.scss */
 svg:not(:root) {
   overflow: hidden;
 }
@@ -343,7 +343,7 @@ svg:not(:root) {
 /*
  * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003341}}
+/* line 341, ../sass/helpers/_reset.scss */
 figure {
   margin: 0;
 }
@@ -354,7 +354,7 @@ figure {
 /*
  * Corrects margin displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003353}}
+/* line 353, ../sass/helpers/_reset.scss */
 form {
   margin: 0;
 }
@@ -362,7 +362,7 @@ form {
 /*
  * Define consistent border, margin, and padding.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003361}}
+/* line 361, ../sass/helpers/_reset.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
@@ -374,7 +374,7 @@ fieldset {
  * 2. Corrects text not wrapping in Firefox 3.
  * 3. Corrects alignment displayed oddly in IE 6/7.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003373}}
+/* line 373, ../sass/helpers/_reset.scss */
 legend {
   border: 0;
   /* 1 */
@@ -391,7 +391,7 @@ legend {
  *    and Chrome.
  * 3. Improves appearance and consistency in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003390}}
+/* line 390, ../sass/helpers/_reset.scss */
 button,
 input,
 select,
@@ -410,7 +410,7 @@ textarea {
  * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
  * the UA stylesheet.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003403}}
+/* line 403, ../sass/helpers/_reset.scss */
 button,
 input {
   line-height: normal;
@@ -425,7 +425,7 @@ input {
  * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
  *    Known issue: inner spacing remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003420}}
+/* line 420, ../sass/helpers/_reset.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -441,7 +441,7 @@ input[type="submit"] {
 /*
  * Re-set default cursor for disabled elements.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003431}}
+/* line 431, ../sass/helpers/_reset.scss */
 button[disabled],
 input[disabled] {
   cursor: default;
@@ -453,7 +453,7 @@ input[disabled] {
  * 3. Removes excess padding in IE 7.
  *    Known issue: excess padding remains in IE 6.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003443}}
+/* line 443, ../sass/helpers/_reset.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -471,7 +471,7 @@ input[type="radio"] {
  * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
  *    (include `-moz` to future-proof).
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003456}}
+/* line 456, ../sass/helpers/_reset.scss */
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
@@ -485,7 +485,7 @@ input[type="search"] {
  * Removes inner padding and search cancel button in Safari 5 and Chrome
  * on OS X.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003469}}
+/* line 469, ../sass/helpers/_reset.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -494,7 +494,7 @@ input[type="search"]::-webkit-search-decoration {
 /*
  * Removes inner padding and border in Firefox 3+.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003478}}
+/* line 478, ../sass/helpers/_reset.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -505,7 +505,7 @@ input::-moz-focus-inner {
  * 1. Removes default vertical scrollbar in IE 6/7/8/9.
  * 2. Improves readability and alignment in all browsers.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003488}}
+/* line 488, ../sass/helpers/_reset.scss */
 textarea {
   overflow: auto;
   /* 1 */
@@ -519,7 +519,7 @@ textarea {
 /*
  * Remove most spacing between table cells.
  */
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/helpers\/_reset\.scss}line{font-family:\00003501}}
+/* line 501, ../sass/helpers/_reset.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
@@ -546,12 +546,12 @@ table {
  *  	@include foo-sprite("image_name");
  * }
  **/
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\000036}}
+/* line 6, ../sass/main.scss */
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000310}}
+/* line 10, ../sass/main.scss */
 .header {
   position: absolute;
   top: 0;
@@ -561,13 +561,13 @@ body {
   text-align: center;
   z-index: 10;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000318}}
+/* line 18, ../sass/main.scss */
 .header img {
   width: 100%;
   height: auto;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000323}}
+/* line 23, ../sass/main.scss */
 .main {
   position: absolute;
   top: 0;
@@ -577,7 +577,7 @@ body {
   margin: 0;
   padding: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000331}}
+/* line 31, ../sass/main.scss */
 .main li {
   position: absolute;
   top: 0;
@@ -589,16 +589,20 @@ body {
   list-style: none;
   background: center center no-repeat;
   background-size: cover;
+  -webkit-transition: opacity 0.5s ease-in;
+  -moz-transition: opacity 0.5s ease-in;
+  -o-transition: opacity 0.5s ease-in;
+  transition: opacity 0.5s ease-in;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000344}}
+/* line 45, ../sass/main.scss */
 .main .js-next-active {
   z-index: 3;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/wamp\/httpdocs\/clients\/Ressac\%20Media\%20-\%20Mtl\/instagram\%20slideshow\/www\/public\/assets\/sass\/main\.scss}line{font-family:\0000348}}
+/* line 49, ../sass/main.scss */
 .main .js-active {
   z-index: 2;
 }

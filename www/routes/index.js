@@ -1,14 +1,15 @@
 var config     = require('../config'),
 	events     = require('../events'),
 	Instagram  = require('instagram-node-lib'),
-	_          = require('underscore');
+	_          = require('underscore'),
+	config     = require('../config');
 
 exports.newphoto = require('./newphoto');
 
 
 exports.index = function( req, res ) {
 	Instagram.tags.recent({
-		name     : 'bonparty',
+		name     : config.hashtag,
 		complete : function( r ) {
 			var data = parseInstragram( r );
 			res.render('index', { data: JSON.stringify(data) });

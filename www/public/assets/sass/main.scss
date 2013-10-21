@@ -39,6 +39,7 @@ body {
 		list-style: none;
 		background: center center no-repeat;
 		background-size: cover;
+		@include transition(opacity 0.5s ease-in);
 		@include opacity(0);
 	}
 	.js-next-active {
