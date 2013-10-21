@@ -34,17 +34,17 @@
 				}
 
 				// Remove extra DOM elements
-				if ( $slides.length > 50 ) {
-					var rest = $slides.length - 50;
-					var shown = $slides.filter('.shown').not(".js-active");
+				// if ( $slides.length > 50 ) {
+				// 	var rest = $slides.length - 50;
+				// 	var shown = $slides.filter('.shown').not(".js-active");
 
-					shown.slice(0, rest).remove();
+				// 	shown.slice(0, rest).remove();
 
-					if (shown.length < rest) {
-						rest = rest - shown.length;
-						$slides.slice(0, rest).remove();
-					}
-				}
+				// 	if (shown.length < rest) {
+				// 		rest = rest - shown.length;
+				// 		$slides.slice(0, rest).remove();
+				// 	}
+				// }
 			});
 		});
 
