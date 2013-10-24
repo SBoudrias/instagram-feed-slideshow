@@ -548,10 +548,11 @@ table {
  **/
 /* line 6, ../sass/main.scss */
 body {
+  background-color: #000;
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* line 10, ../sass/main.scss */
+/* line 11, ../sass/main.scss */
 .header {
   position: absolute;
   top: 0;
@@ -561,7 +562,7 @@ body {
   text-align: center;
   z-index: 10;
 }
-/* line 18, ../sass/main.scss */
+/* line 19, ../sass/main.scss */
 .header:before {
   content: "";
   height: 100%;
@@ -569,7 +570,7 @@ body {
   vertical-align: middle;
   margin-left: -4px;
 }
-/* line 25, ../sass/main.scss */
+/* line 26, ../sass/main.scss */
 .header img {
   width: 100%;
   height: auto;
@@ -577,7 +578,7 @@ body {
   vertical-align: middle;
 }
 
-/* line 32, ../sass/main.scss */
+/* line 33, ../sass/main.scss */
 .main {
   position: absolute;
   top: 0;
@@ -587,7 +588,7 @@ body {
   margin: 0;
   padding: 0;
 }
-/* line 40, ../sass/main.scss */
+/* line 41, ../sass/main.scss */
 .main li {
   position: absolute;
   top: 0;
@@ -605,11 +606,11 @@ body {
   -o-transition: opacity 0.5s ease-in;
   transition: opacity 0.5s ease-in;
 }
-/* line 54, ../sass/main.scss */
+/* line 55, ../sass/main.scss */
 .main .js-next-active {
   z-index: 3;
 }
-/* line 57, ../sass/main.scss */
+/* line 58, ../sass/main.scss */
 .main .js-active {
   z-index: 2;
   opacity: 1;

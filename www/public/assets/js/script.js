@@ -42,7 +42,7 @@
 
 					if (shown.length < rest) {
 						rest = rest - shown.length;
-						$slides.slice(0, rest).remove();
+						$main.find('.slide').slice(0, rest).remove();
 					}
 				}
 			});

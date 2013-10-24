@@ -13,7 +13,7 @@
 </head>
 <body>
 	<div class="header">
-		<img src="/assets/img/feed.svg" alt="Bon party" width="1000" height="637">
+		<img src="/assets/img/feed.svg" alt="#k7halloween2013" width="576" height="87">
 	</div>
 	<ul id="main" class="main"></ul>
 	
