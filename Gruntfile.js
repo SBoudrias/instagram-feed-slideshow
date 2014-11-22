@@ -15,7 +15,7 @@ module.exports = function( grunt ) {
 	"use strict";
 
 	grunt.initConfig({
-		
+
 		// Compile SCSS files to CSS
 		// Two config are available, `dev` will produce a source map with the code to be use with fire-sass
 		// or Chrome devtools. `prod` compress and minify the code
@@ -28,7 +28,7 @@ module.exports = function( grunt ) {
 			prod: {},
 			watch: { options: { watch: true } }
 		},
-		
+
 		// Watch task checks for files changes, then execute the defined task
 		watch: {
 			compass: {
@@ -36,10 +36,12 @@ module.exports = function( grunt ) {
 				tasks: ['compass:dev']
 			}
 		}
-		
+
 	});
-	
+
 	grunt.loadNpmTasks('grunt-contrib-compass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+
+	grunt.registerTask('default', ['compass:prod']);
 
 };

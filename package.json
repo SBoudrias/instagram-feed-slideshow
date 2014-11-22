@@ -1,22 +1,22 @@
 {
-  "name": "ressac-slideshow",
-  "version": "0.0.1",
+  "name": "instagram-feed-slideshow",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node www/app.js"
+    "build": "grunt",
+    "start": "npm run-script build && node www/app.js"
   },
   "dependencies": {
-    "hjs": "~0.0.6",
-    "express": "~3.4.2",
     "async": "~0.2.9",
-    "underscore": "~1.4.3",
+    "express": "~3.4.2",
+    "hjs": "~0.0.6",
     "instagram-node-lib": "~0.1.1",
-    "socket.io": "~0.9.16"
-  },
-  "devDependencies": {
+    "socket.io": "~0.9.16",
+    "underscore": "~1.4.3",
+    "grunt": "~0.4.1",
+    "grunt-cli": "^0.1.13",
     "grunt-contrib-compass": "~0.6.0",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt": "~0.4.1"
+    "grunt-contrib-watch": "~0.5.3"
   },
   "engines": {
     "node": "0.10.x"

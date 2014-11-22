@@ -2,15 +2,15 @@
  * Module dependencies.
  */
 
-var express  = require('express'),
-	routes   = require('./routes'),
-	config   = require('./config'),
-	http     = require('http'),
-	path     = require('path'),
-	Instagram = require('instagram-node-lib'),
-	io        = require('socket.io'),
-	_         = require('underscore'),
-	EventEmitter = require('events').EventEmitter;
+var express = require('express');
+var routes = require('./routes');
+var config = require('./config');
+var http = require('http');
+var path = require('path');
+var Instagram = require('instagram-node-lib');
+var io = require('socket.io');
+var _ = require('underscore');
+var EventEmitter = require('events').EventEmitter;
 
 var ev = new EventEmitter();
 
@@ -96,7 +96,7 @@ ioServer.configure(function() {
 // Subscribe to instagram
 
 Instagram.media.unsubscribe({ object: 'tag' });
-process.on('SIGINT', function() {
+process.on('exit', function() {
 	Instagram.media.unsubscribe({ object: 'tag' });
 });
 Instagram.subscriptions.subscribe({ object: 'tag', object_id: config.hashtag });
