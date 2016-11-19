@@ -7,16 +7,16 @@
     "start": "npm run-script build && node www/app.js"
   },
   "dependencies": {
-    "async": "~0.2.9",
-    "express": "~3.4.2",
+    "async": "~2.1.2",
+    "express": "~4.14.0",
     "hjs": "~0.0.6",
     "instagram-node-lib": "~0.1.1",
-    "socket.io": "~0.9.16",
-    "underscore": "~1.4.3",
-    "grunt": "~0.4.1",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-compass": "~0.6.0",
-    "grunt-contrib-watch": "~0.5.3"
+    "socket.io": "~1.5.1",
+    "underscore": "~1.8.3",
+    "grunt": "~1.0.1",
+    "grunt-cli": "^1.2.0",
+    "grunt-contrib-compass": "~1.1.1",
+    "grunt-contrib-watch": "~1.0.0"
   },
   "engines": {
     "node": "0.10.x"
